@@ -4,6 +4,7 @@ body{
     width: 100vw;
     height: 100vh;
     font-family: 'Roboto', sans-serif; 
+    font-size: 13px;
 }
 
 #contenedor{
@@ -66,26 +67,87 @@ main{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* border: 2px solid brown; */
-    
-
+    /* border: 2px solid brown; */   
 }
 
-main form{
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
+#logo{
+    width: 270px;
+    height: 100px;
+}
+
+#section2{
+    height: 100px;
+    padding: 20px;
+    /* border: 2px solid green; */
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    justify-content: center;
+    
+    width: 580px;
+}
+
+#section2 form{
+    width: 100%;
+}
+
+#section2 .search{
+    display: flex;
+    flex-direction: row;
+    /* border:2px solid red; */
+    position: relative;
+    justify-content: center;
+    align-items: center;
 }
 
 #input-search{
-    grid-column: 1/-1;
+    width: 100%;
     border-radius: 20px;
     height: 40px; 
     border: 1px solid rgb(208, 201, 201);
+    padding-left: 40px;   
+}
+
+
+.icon{
+    position: absolute;
+    width: 35px;
+    height: 35px;
+}
+
+.lupa{
+    left: 10px;
+    width: 20px;
+    height: 20px;
     
 }
+
+.micro{
+    right: 50px;
+}
+
+.camera{
+    right: 10px;
+}
+
+
+
+.botones{
+    display: flex;
+    justify-content: center;
+}
+
+
 /* Debe aparecer un border cuando mi puntero este sobre la etiqueta "input" */
+
 #input-search:hover{
     border: 1px solid rgb(208, 201, 201, 0.5)
+}
+
+#input-search:focus{
+    /* border: none; */
+    outline:none;
 }
 
 .btn-search{
@@ -101,61 +163,21 @@ main form{
     border: 1px solid rgb(208, 201, 201)
 }
 
-#search{
-    grid-column: 2/3;
+#search{  
     background-color: #ececf0;
 }
 
-#lucky{
-    grid-column: 3/4;
+#lucky{ 
     background-color: #ececf0;
 }
-
-#logo{
-    width: 270px;
-    height: 100px;
-}
-
-#section2{
-    height: 100px;
-    padding: 20px;
-    /* border: 2px solid green; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* border:2px solid red; */
-    width: 580px;
-}
-
 
 #section3{
-    height: 200px;
+    height: 200px;   
 }
 
-
-.icon{
-    width: 35px;
-    height: 35px;
-    padding-top: 5px;
+#section3 p{
+    margin:0px;
 }
-
-.lupa{
-    width: 20px;
-    height: 20px;
-    padding: 10px;
-}
-
-#position{
-    position: absolute;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    height: 40px;
-    /* border: 2px solid orange; */
-    width: 580px;
-}
-
 
 
 
@@ -184,15 +206,20 @@ footer a:hover{
 .links-footer{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     border-top: 1px solid rgb(208, 201, 201);
     padding: 10px;
 }
 
 .links-footer a{
-    margin: 15px; 
+    margin: 10px; 
 }
 
 footer section p{
     padding-left: 20px;
 }
 
+.links-footer div{
+    display: flex;
+    flex-wrap: wrap;
+}
